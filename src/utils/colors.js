@@ -3,4 +3,5 @@ export const colors = {
     active: 'green',
     white:'white',
     black1: 'black',
+    dot: 'silver'
 }

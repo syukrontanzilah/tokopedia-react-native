@@ -7,11 +7,26 @@ import {
   View,
   ImageBackground,
   Animated,
-  useWindowDimensions
+  useWindowDimensions,
+  Image
 } from "react-native";
-import { ILTokopedia1 } from "../../../asset";
+import { ILTokopedia1, ILTokopedia2 } from "../../../asset";
+import { colors } from "../../../utils/colors";
 
-const images = new Array(8).fill('https://jatengpos.co.id/wp-content/uploads/2020/05/3-2.jpg');
+const image1 = <Image source={ILTokopedia2} />
+
+const images = [
+  'https://jatengpos.co.id/wp-content/uploads/2020/05/3-2.jpg',
+  'https://cdn2.tstatic.net/jogja/foto/bank/images/tokopedia-ramadan-ekstra_20180510_185652.jpg',
+  'https://ghozaliq.com/wp-content/uploads/2018/05/Tokopedia-3.jpg',
+  'https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2018/08/Blog_Cara-Daftar-untuk-Membuat-Akun-Tokopedia-dengan-Mudah.jpg',
+  'https://ecs7.tokopedia.net/img/blog/seller/2018/07/SellerCenter11.jpg',
+  'https://pbs.twimg.com/media/De7vgm-U8AE1Wq2.jpg',
+  'https://jatengpos.co.id/wp-content/uploads/2020/05/3-2.jpg',
+  'https://cdn2.tstatic.net/jogja/foto/bank/images/tokopedia-ramadan-ekstra_20180510_185652.jpg',
+
+
+]
 
 const CarouselHome = () => {
   const scrollX = useRef(new Animated.Value(0)).current;
@@ -21,7 +36,7 @@ const CarouselHome = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.scrollContainer}>
         <ScrollView
-          horizontal={true}
+          horizontal
           style={styles.scrollViewStyle}
           pagingEnabled
           showsHorizontalScrollIndicator={false}
@@ -84,18 +99,21 @@ const styles = StyleSheet.create({
   },
   card: {
     flex: 1,
+    // height:undefined,
+    // width:undefined,
+    // resizeMode:'cover'
   },
   normalDot: {
     height: 8,
     width: 8,
     borderRadius: 4,
-    backgroundColor: "silver",
+    backgroundColor: colors.dot,
     marginHorizontal: 4
   },
   indicatorContainer: {
     flexDirection: "row",
     alignSelf: 'flex-start',
-    marginLeft:5
+    marginLeft: 5
   }
 });
 
