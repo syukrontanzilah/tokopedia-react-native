@@ -1,7 +1,6 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import RouteKategori from './pages/Kategori/RouteKategori'
 import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import { StyleSheet } from 'react-native';
 import Router from './Router/Router';
 
 const App = () => {
