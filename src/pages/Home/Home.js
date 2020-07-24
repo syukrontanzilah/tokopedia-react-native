@@ -1,14 +1,20 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import { CarouselHome } from '../../component'
 
 const Home = () => {
     return (
-        <View>
-            <Text>home</Text>
+        <View style={styles.page}>
+            <CarouselHome/>
+            {/* <Text>homeiii</Text> */}
         </View>
     )
 }
 
 export default Home
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    page:{
+        flex:1
+    }
+})
