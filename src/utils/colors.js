@@ -4,5 +4,6 @@ export const colors = {
     white:'white',
     black1: 'black',
     dot: 'silver',
-    gray:'gray'
+    gray:'gray',
+    border: '#d2d2d2'
 }

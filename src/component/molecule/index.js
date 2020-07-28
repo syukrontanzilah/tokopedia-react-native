@@ -1,7 +1,9 @@
 import CarouselHome from './Carousel/CarouselHome';
-import SearchAndIcon from './Search/SearchAndIcon'
+import SearchAndIcon from './Search/SearchAndIcon';
+import ScanKupon from './ScanKupon/ScanKupon'
 
 export{
     CarouselHome,
-    SearchAndIcon
+    SearchAndIcon,
+    ScanKupon
 }

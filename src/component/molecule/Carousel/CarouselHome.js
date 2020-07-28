@@ -3,10 +3,9 @@ import { Animated, ImageBackground, SafeAreaView, ScrollView, StyleSheet, useWin
 import { colors } from "../../../utils/colors";
 
 const images = [
+  'https://cdn1.vectorstock.com/i/1000x1000/84/20/online-job-isometric-composition-vector-16098420.jpg',
   'https://jatengpos.co.id/wp-content/uploads/2020/05/3-2.jpg',
   "https://i.pinimg.com/originals/24/9b/7c/249b7cd9e7cae39f53ce5f2f04fa8eaa.jpg",
-  'https://pbs.twimg.com/media/EGmcMg0U8AEjTrG.jpg:large',
-  'https://cdn2.tstatic.net/jogja/foto/bank/images/tokopedia-ramadan-ekstra_20180510_185652.jpg',
   'https://ghozaliq.com/wp-content/uploads/2018/05/Tokopedia-3.jpg',
   'https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2018/08/Blog_Cara-Daftar-untuk-Membuat-Akun-Tokopedia-dengan-Mudah.jpg',
   'https://ecs7.tokopedia.net/img/blog/seller/2018/07/SellerCenter11.jpg',
@@ -71,7 +70,7 @@ const CarouselHome = () => {
         </View>
       </View>
 
-      <TouchableOpacity style={{alignSelf:'flex-end', marginRight:15,}}>
+      <TouchableOpacity style={{alignSelf:'flex-end', marginRight:18,}}>
         <Text style={{fontSize:13, color:colors.active, fontWeight:'bold', marginTop:-12}}>Lihat semua promo</Text>
       </TouchableOpacity>
     </SafeAreaView>
@@ -105,7 +104,7 @@ const styles = StyleSheet.create({
   indicatorContainer: {
     flexDirection: "row",
     alignSelf: 'flex-start',
-    marginLeft: 5
+    marginLeft: 14
   }
 });
 

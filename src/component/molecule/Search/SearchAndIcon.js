@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingVertical: 8,
         flex: 1,
-        paddingHorizontal: 18
+        paddingHorizontal: 16
 
     },
     input: {

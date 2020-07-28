@@ -22,7 +22,9 @@ import IconAkunActive from './profileactive.svg'
 import IconLove from './heart.svg';
 import IconSearch from './search.svg';
 import IconPesan from './pesan.svg';
-import IconBell from './bell-1.svg'
+import IconBell from './bell-1.svg';
+import IconQR from './qr-code.svg';
+import IconKupon from './tags.svg'
 
 
 export { IconCar, IconCoffee, IconGame, IconHoby, IconFlower, 
@@ -36,6 +38,7 @@ export { IconCar, IconCoffee, IconGame, IconHoby, IconFlower,
     IconKeranjang,
     IconKeranjangActive,
     IconAkun,
-    IconAkunActive, IconLove, IconSearch, IconPesan, IconBell
+    IconAkunActive, IconLove, IconSearch, IconPesan, IconBell,
+    IconQR, IconKupon
 };
 
