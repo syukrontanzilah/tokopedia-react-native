@@ -1,31 +1,17 @@
 import React, { useRef } from "react";
-import {
-  SafeAreaView,
-  ScrollView,
-  Text,
-  StyleSheet,
-  View,
-  ImageBackground,
-  Animated,
-  useWindowDimensions,
-  Image
-} from "react-native";
-import { ILTokopedia1, ILTokopedia2 } from "../../../asset";
+import { Animated, ImageBackground, SafeAreaView, ScrollView, StyleSheet, useWindowDimensions, View, Text, TouchableOpacity } from "react-native";
 import { colors } from "../../../utils/colors";
-
-const image1 = <Image source={ILTokopedia2} />
 
 const images = [
   'https://jatengpos.co.id/wp-content/uploads/2020/05/3-2.jpg',
+  "https://i.pinimg.com/originals/24/9b/7c/249b7cd9e7cae39f53ce5f2f04fa8eaa.jpg",
+  'https://pbs.twimg.com/media/EGmcMg0U8AEjTrG.jpg:large',
   'https://cdn2.tstatic.net/jogja/foto/bank/images/tokopedia-ramadan-ekstra_20180510_185652.jpg',
   'https://ghozaliq.com/wp-content/uploads/2018/05/Tokopedia-3.jpg',
   'https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2018/08/Blog_Cara-Daftar-untuk-Membuat-Akun-Tokopedia-dengan-Mudah.jpg',
   'https://ecs7.tokopedia.net/img/blog/seller/2018/07/SellerCenter11.jpg',
   'https://pbs.twimg.com/media/De7vgm-U8AE1Wq2.jpg',
   'https://jatengpos.co.id/wp-content/uploads/2020/05/3-2.jpg',
-  'https://cdn2.tstatic.net/jogja/foto/bank/images/tokopedia-ramadan-ekstra_20180510_185652.jpg',
-
-
 ]
 
 const CarouselHome = () => {
@@ -63,6 +49,7 @@ const CarouselHome = () => {
             );
           })}
         </ScrollView>
+
         <View style={styles.indicatorContainer}>
           {images.map((image, imageIndex) => {
             const width = scrollX.interpolate({
@@ -83,14 +70,19 @@ const CarouselHome = () => {
           })}
         </View>
       </View>
+
+      <TouchableOpacity style={{alignSelf:'flex-end', marginRight:15,}}>
+        <Text style={{fontSize:13, color:colors.active, fontWeight:'bold', marginTop:-12}}>Lihat semua promo</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }
+export default CarouselHome;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
+    position:'relative'
   },
   scrollContainer: {
     height: 300,
@@ -117,5 +109,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default CarouselHome;
 

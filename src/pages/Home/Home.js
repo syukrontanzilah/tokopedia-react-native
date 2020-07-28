@@ -1,12 +1,23 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { CarouselHome } from '../../component'
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
+import { CarouselHome, SearchAndIcon } from '../../component'
 
 const Home = () => {
     return (
         <View style={styles.page}>
-            <CarouselHome/>
-            {/* <Text>homeiii</Text> */}
+            <SearchAndIcon />
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                style={styles.content}>
+                <CarouselHome />
+
+
+                <View style={{ height: 1000 }} />
+
+
+            </ScrollView>
+
+
         </View>
     )
 }
@@ -14,7 +25,10 @@ const Home = () => {
 export default Home
 
 const styles = StyleSheet.create({
-    page:{
-        flex:1
+    page: {
+        flex: 1
+    },
+    content: {
+
     }
 })

@@ -5,6 +5,15 @@ import Home from './Home/Home'
 import Keranjang from './Keranjang/Keranjang'
 import OfficeStore from './OfficeStore/OfficeStore'
 import Splash from './Splash/Splash'
+import TopTab from './OfficeStore/TopTab';
+import TabItem from './OfficeStore/TabItem';
+import RouteOfficeStore from './OfficeStore/RouteOfficeStore';
+import AutoHobbies from './OfficeStore/AutoHobbies';
+import Electronic from './OfficeStore/Electronic';
+import Fashion from './OfficeStore/Fashion';
+import Groceries from './OfficeStore/Groceries';
+import HomeOffice from './OfficeStore/HomeOffice'
+
 
 export {
     Kategori,
@@ -13,5 +22,9 @@ export {
     Home,
     Keranjang,
     OfficeStore,
-    Splash
+    Splash,
+    TopTab,
+    TabItem,
+    RouteOfficeStore,
+    AutoHobbies, Electronic, Fashion, Groceries, HomeOffice
 }
