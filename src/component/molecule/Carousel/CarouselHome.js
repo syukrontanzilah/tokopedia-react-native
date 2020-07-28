@@ -3,14 +3,14 @@ import { Animated, ImageBackground, SafeAreaView, ScrollView, StyleSheet, useWin
 import { colors } from "../../../utils/colors";
 
 const images = [
+  'https://cdn4.vectorstock.com/i/1000x1000/07/78/cartoon-japan-travel-infographic-card-poster-ad-vector-23510778.jpg',
   'https://cdn1.vectorstock.com/i/1000x1000/84/20/online-job-isometric-composition-vector-16098420.jpg',
-  'https://jatengpos.co.id/wp-content/uploads/2020/05/3-2.jpg',
-  "https://i.pinimg.com/originals/24/9b/7c/249b7cd9e7cae39f53ce5f2f04fa8eaa.jpg",
-  'https://ghozaliq.com/wp-content/uploads/2018/05/Tokopedia-3.jpg',
-  'https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2018/08/Blog_Cara-Daftar-untuk-Membuat-Akun-Tokopedia-dengan-Mudah.jpg',
-  'https://ecs7.tokopedia.net/img/blog/seller/2018/07/SellerCenter11.jpg',
-  'https://pbs.twimg.com/media/De7vgm-U8AE1Wq2.jpg',
-  'https://jatengpos.co.id/wp-content/uploads/2020/05/3-2.jpg',
+  'https://cdn2.vectorstock.com/i/1000x1000/32/01/online-job-searching-isometric-flat-concept-vector-6893201.jpg',
+  'https://cdn4.vectorstock.com/i/1000x1000/38/63/iindustrial-revolution-40-isometric-flat-vector-21873863.jpg',
+  'https://cdn3.vectorstock.com/i/1000x1000/61/17/online-reading-isometric-view-vector-15376117.jpg',
+  'https://lh3.googleusercontent.com/proxy/rqttcZKx2ZSf2XOkZMD9NKZTMS1bx2bglG-l1ju5SwXUxFUVdvAioUf7FuValN_99256WasVSoWxw8ZvGPkf17wK3HOqBcU',
+  'https://exob2b.com/wp-content/uploads/2018/12/exo-rich-content.jpg',
+  'https://cdn1.vectorstock.com/i/1000x1000/64/95/japan-travel-map-in-flat-vector-11926495.jpg',
 ]
 
 const CarouselHome = () => {
@@ -70,8 +70,8 @@ const CarouselHome = () => {
         </View>
       </View>
 
-      <TouchableOpacity style={{alignSelf:'flex-end', marginRight:18,}}>
-        <Text style={{fontSize:13, color:colors.active, fontWeight:'bold', marginTop:-12}}>Lihat semua promo</Text>
+      <TouchableOpacity style={{ alignSelf: 'flex-end', marginRight: 18, }}>
+        <Text style={{ fontSize: 13, color: colors.active, fontWeight: 'bold', marginTop: -12 }}>Lihat semua promo</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -81,7 +81,7 @@ export default CarouselHome;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    position:'relative'
+    position: 'relative'
   },
   scrollContainer: {
     height: 300,

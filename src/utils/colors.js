@@ -5,5 +5,7 @@ export const colors = {
     black1: 'black',
     dot: 'silver',
     gray:'gray',
-    border: '#d2d2d2'
+    gray1: '#474747',
+    border: '#d2d2d2',
+    bckgMenu: 'lightblue'
 }

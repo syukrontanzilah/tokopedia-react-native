@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
-import { CarouselHome, SearchAndIcon, ScanKupon } from '../../component'
+import { CarouselHome, SearchAndIcon, ScanKupon, MainMenu } from '../../component'
 
 const Home = () => {
     return (
@@ -12,7 +12,28 @@ const Home = () => {
                 <CarouselHome />
                 <View style={{ height: 10 }} />
 
-                <ScanKupon/>
+                <ScanKupon />
+                <View style={{ height: 15 }} />
+
+
+                <ScrollView
+                    showsHorizontalScrollIndicator={false}
+                    style={styles.scrollMenu}
+                    horizontal>
+
+                    <MainMenu title="Lihat Semua" />
+                    <MainMenu title="Kategori" />
+                    <MainMenu title="Top Up & Tagihan" />
+                    <MainMenu title="Keuangan" />
+                    <MainMenu title="Travel & Entertainment" />
+                    <MainMenu title="Pulsa" />
+                    <MainMenu title="Angsuran Kredit" />
+                    <MainMenu title="Tiket Kereta Api" />
+                    <MainMenu title="Semua Promo" />
+                    <MainMenu title="Kesehatan" />
+
+                </ScrollView>
+
 
 
                 <View style={{ height: 1000 }} />
@@ -33,5 +54,8 @@ const styles = StyleSheet.create({
     },
     content: {
 
+    },
+    scrollMenu: {
+        paddingHorizontal: 14
     }
 })
