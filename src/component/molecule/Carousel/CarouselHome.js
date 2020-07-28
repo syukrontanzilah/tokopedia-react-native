@@ -71,7 +71,7 @@ const CarouselHome = () => {
       </View>
 
       <TouchableOpacity style={{ alignSelf: 'flex-end', marginRight: 18, }}>
-        <Text style={{ fontSize: 13, color: colors.active, fontWeight: 'bold', marginTop: -12 }}>Lihat semua promo</Text>
+        <Text style={{ fontSize: 14, color: colors.active, fontWeight: 'bold', marginTop: -12 }}>Lihat semua promo</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );

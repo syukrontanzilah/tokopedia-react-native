@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-import { IconBug, IconMatahari, IconLight, IconKategori, IconTravel, IconPulsa, IconKeuangan, IconLihatSemua, IconRecycle } from '../../../asset/icon'
+import { IconBug, IconMatahari, IconLight, IconKategori, IconTravel, IconPulsa, IconKeuangan, IconLihatSemua, IconRecycle, IconSemuaPromo, IconMobil, IconKesehatan } from '../../../asset/icon'
 import { colors } from '../../../utils/colors'
 
 const MainMenu = ({ title }) => {
@@ -21,9 +21,20 @@ const MainMenu = ({ title }) => {
             return <IconKeuangan style={styles.iconSpec} />
         }
         if (title === "Lihat Semua") {
+            return <IconSemuaPromo style={styles.iconSpec} />
+        }
+        if (title === "Semua Promo") {
+            return <IconMatahari style={styles.iconSpec} />
+        }
+        if (title === "Angsuran Kredit") {
             return <IconRecycle style={styles.iconSpec} />
         }
-
+        if (title === "Tiket Kereta Api") {
+            return <IconMobil style={styles.iconSpec} />
+        }
+        if (title === "Kesehatan") {
+            return <IconKesehatan style={styles.iconSpec} />
+        }
 
         return <IconMatahari style={styles.iconSpec} />
     }
