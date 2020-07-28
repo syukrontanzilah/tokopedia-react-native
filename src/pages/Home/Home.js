@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
-import { CarouselHome, SearchAndIcon, ScanKupon, MainMenu, KhususPenggunaBaru } from '../../component'
+import { CarouselHome, SearchAndIcon, ScanKupon, MainMenu, KhususPenggunaBaru, KejarDiskon } from '../../component'
 
 const Home = () => {
     return (
@@ -36,6 +36,9 @@ const Home = () => {
                 <View style={{ height: 15 }} />
 
                 <KhususPenggunaBaru />
+                <View style={{ height: 15 }} />
+
+<KejarDiskon/>
 
                 <View style={{ height: 1000 }} />
 

@@ -6,7 +6,12 @@ import ILPromo2 from './il2.jpg';
 import ILListrik from './illistrik.jpg';
 import ILKredit from './ilKredit.jpg';
 import ILBpjs from './bpjs.jpg';
-import ILInternet from './internet.jpg'
+import ILInternet from './internet.jpg';
+import ILBanner from './banner.jpg';
+import ILHP from './hp1.jpg';
+import ILBebasOngkir from './bebasongkir.jpg';
+import ILTas from './eiger.jpg';
+import ILSepeda from './sepeda.png'
 
 export {
     ILTokopedia1,
@@ -17,5 +22,10 @@ export {
     ILListrik,
     ILKredit,
     ILBpjs,
-    ILInternet
+    ILInternet,
+    ILBanner,
+    ILHP,
+    ILBebasOngkir,
+    ILTas,
+    ILSepeda
 }
