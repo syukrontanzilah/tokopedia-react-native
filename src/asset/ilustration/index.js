@@ -11,7 +11,8 @@ import ILBanner from './banner.jpg';
 import ILHP from './hp1.jpg';
 import ILBebasOngkir from './bebasongkir.jpg';
 import ILTas from './eiger.jpg';
-import ILSepeda from './sepeda.png'
+import ILSepeda from './sepeda.png';
+import ILLaptop from './laptop.jpg'
 
 export {
     ILTokopedia1,
@@ -27,5 +28,6 @@ export {
     ILHP,
     ILBebasOngkir,
     ILTas,
-    ILSepeda
+    ILSepeda,
+    ILLaptop
 }

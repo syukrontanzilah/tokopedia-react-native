@@ -35,7 +35,8 @@ import IconLihatSemua from './semua.svg';
 import IconRecycle from './recycle.svg';
 import IconSemuaPromo from './semuaPromo.svg';
 import IconMobil from './mobil.svg';
-import IconKesehatan from './kesehatan.svg'
+import IconKesehatan from './kesehatan.svg';
+import IconNext from './right-arrow-6.svg'
 
 
 export { IconCar, IconCoffee, IconGame, IconHoby, IconFlower, 
@@ -52,6 +53,6 @@ export { IconCar, IconCoffee, IconGame, IconHoby, IconFlower,
     IconAkunActive, IconLove, IconSearch, IconPesan, IconBell,
     IconQR, IconKupon,
     IconLight, IconKategori, IconTravel, IconPulsa, IconKeuangan, IconLihatSemua, IconRecycle,
-    IconSemuaPromo, IconMobil, IconKesehatan
+    IconSemuaPromo, IconMobil, IconKesehatan, IconNext
 };
 

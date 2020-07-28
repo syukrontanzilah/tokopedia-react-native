@@ -4,6 +4,8 @@ import ScanKupon from './ScanKupon/ScanKupon';
 import MainMenu from './MainMenu/MainMenu';
 import KhususPenggunaBaru from './KhususPenggunaBaru/KhususPenggunaBaru';
 import KejarDiskon from './KejarDiskon/KejarDiskon'
+import Card1 from './Card/Card1';
+import Card2 from './Card/Card2'
 
 export{
     CarouselHome,
@@ -11,5 +13,5 @@ export{
     ScanKupon,
     MainMenu,
     KhususPenggunaBaru,
-    KejarDiskon
+    KejarDiskon, Card1, Card2
 }

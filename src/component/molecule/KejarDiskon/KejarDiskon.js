@@ -1,7 +1,8 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView, ImageBackground } from 'react-native'
 import { colors } from '../../../utils/colors'
-import { ILBanner, ILHP, ILBebasOngkir, ILTas, ILSepeda } from '../../../asset/ilustration'
+import { ILBanner, ILHP, ILBebasOngkir, ILTas, ILSepeda, ILLaptop } from '../../../asset/ilustration'
+import { IconNext } from '../../../asset/icon'
 
 const KejarDiskon = () => {
     return (
@@ -73,12 +74,21 @@ const KejarDiskon = () => {
                         </View>
                     </TouchableOpacity>
 
+                    <TouchableOpacity style={styles.card}>
+                        <View style={styles.imageWrap}>
+                            <Image source={ILLaptop} style={styles.image} />
+                        </View>
+                        <View style={styles.wrapHarga}>
+                            <Text style={styles.angkaCoret}>Rp. 5.429.000</Text>
+                            <Text style={styles.harga}>Rp. 4.899.900</Text>
+                            <Image source={ILBebasOngkir} style={styles.logo} />
+                        </View>
+                    </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.card}>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.card}>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.card}>
+                  
+                    <TouchableOpacity style={styles.cardLast}>
+                        <IconNext/>
+                        <Text style={styles.lihat}>Lihat Produk Lainnya</Text>
                     </TouchableOpacity>
 
                     <View style={{ width: 135 }} />
@@ -186,5 +196,14 @@ const styles = StyleSheet.create({
     },
     logo: {
         height: 32, width: 42
+    },
+    cardLast:{
+        height: 210,
+        width: 130,
+        backgroundColor: colors.white,
+        borderRadius: 10,
+        marginRight: 10,
+        justifyContent:'center',
+        alignItems:'center'
     }
 })
