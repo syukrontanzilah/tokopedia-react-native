@@ -3,10 +3,12 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { IconBell, IconLove, IconPesan, IconSearch } from '../../../asset/icon'
 import { colors } from '../../../utils/colors'
 
-const SearchAndIcon = () => {
+const SearchAndIcon = ({onPressSearch}) => {
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.input}>
+            <TouchableOpacity 
+            onPress={onPressSearch}
+            style={styles.input}>
                 <IconSearch />
                 <Text style={styles.textinput}>Cari Samsung Galaxi</Text>
             </TouchableOpacity>

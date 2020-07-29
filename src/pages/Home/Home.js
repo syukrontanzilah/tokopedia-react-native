@@ -4,10 +4,11 @@ import { CarouselHome, SearchAndIcon, ScanKupon, MainMenu, KhususPenggunaBaru, K
 import { ILTas, ILHP, ILSepeda } from '../../asset/ilustration'
 import { colors } from '../../utils/colors'
 
-const Home = () => {
+const Home = ({navigation}) => {
     return (
         <View style={styles.page}>
-            <SearchAndIcon />
+            <SearchAndIcon
+            onPressSearch={()=> navigation.navigate('SearchPage')} />
             <ScrollView
                 showsVerticalScrollIndicator={false}
                 style={styles.content}>

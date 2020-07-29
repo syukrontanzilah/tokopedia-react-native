@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import { Akun, Feed, Home, Keranjang, OfficeStore, Splash } from '../pages';
+import { Akun, Feed, Home, Keranjang, OfficeStore, Splash, SearchPage } from '../pages';
 import { TabBar } from './BottomNavigation';
 
 
@@ -30,6 +30,8 @@ const Router = () => {
         >
             <Stack.Screen name="MainApp" component={MainApp} />
             <Stack.Screen name="Splash" component={Splash} />
+            <Stack.Screen name="SearchPage" component={SearchPage} />
+
         </Stack.Navigator>
     )
 }

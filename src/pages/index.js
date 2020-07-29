@@ -12,7 +12,8 @@ import AutoHobbies from './OfficeStore/AutoHobbies';
 import Electronic from './OfficeStore/Electronic';
 import Fashion from './OfficeStore/Fashion';
 import Groceries from './OfficeStore/Groceries';
-import HomeOffice from './OfficeStore/HomeOffice'
+import HomeOffice from './OfficeStore/HomeOffice';
+import SearchPage from './SearchPage/SearchPage'
 
 
 export {
@@ -26,5 +27,6 @@ export {
     TopTab,
     TabItem,
     RouteOfficeStore,
-    AutoHobbies, Electronic, Fashion, Groceries, HomeOffice
+    AutoHobbies, Electronic, Fashion, Groceries, HomeOffice,
+    SearchPage
 }

@@ -40,7 +40,10 @@ import IconNext from './right-arrow-6.svg';
 import IconMap from './map.svg';
 import IconStarFull from './star1.svg';
 import IconStarHalf from './star-half-filled.svg';
-import IconStarEmpty from './star-empty.svg'
+import IconStarEmpty from './star-empty.svg';
+import IconVoice from './voice.svg'
+
+import IconBackTo from './left-arrow-3.svg'
 
 
 export { IconCar, IconCoffee, IconGame, IconHoby, IconFlower, 
@@ -58,6 +61,7 @@ export { IconCar, IconCoffee, IconGame, IconHoby, IconFlower,
     IconQR, IconKupon,
     IconLight, IconKategori, IconTravel, IconPulsa, IconKeuangan, IconLihatSemua, IconRecycle,
     IconSemuaPromo, IconMobil, IconKesehatan, IconNext, IconMap,
-    IconStarEmpty, IconStarFull, IconStarHalf
+    IconStarEmpty, IconStarFull, IconStarHalf,
+    IconVoice, IconBackTo
 };
 
