@@ -23,6 +23,7 @@ const MainApp = () => {
 const Router = () => {
     return (
         <Stack.Navigator
+        initialRouteName="Splash"
             screenOptions={{
                 headerShown: false
             }}

@@ -1,15 +1,27 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React, { useEffect } from 'react'
+import { StyleSheet, Text, View, ImageBackground } from 'react-native'
+import { ILSplash } from '../../asset'
 
-const Splash = () => {
+const Splash = ({ navigation }) => {
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.replace('MainApp')
+        }, 3000)
+    }, [])
     return (
-        <View>
-            <Text>spplassh
-            </Text>
-        </View>
+        <ImageBackground
+            source={ILSplash}
+            style={styles.imagebckg}>
+        </ImageBackground>
     )
 }
 
 export default Splash
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    imagebckg: {
+        flex: 1,
+        height: '100%',
+        width: '100%'
+    }
+})

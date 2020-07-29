@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
         marginBottom: 5
     },
     logo: {
-        height: 32, width: 42
+        height: 18, width: 65
     },
     cardLast:{
         height: 210,

@@ -1,7 +1,8 @@
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
-import { CarouselHome, SearchAndIcon, ScanKupon, MainMenu, KhususPenggunaBaru, KejarDiskon, TextHeader, Card1 } from '../../component'
+import { CarouselHome, SearchAndIcon, ScanKupon, MainMenu, KhususPenggunaBaru, KejarDiskon, TextHeader, Card1, Gap, ButtonColor, Card2 } from '../../component'
 import { ILTas, ILHP, ILSepeda } from '../../asset/ilustration'
+import { colors } from '../../utils/colors'
 
 const Home = () => {
     return (
@@ -11,11 +12,9 @@ const Home = () => {
                 showsVerticalScrollIndicator={false}
                 style={styles.content}>
                 <CarouselHome />
-                <View style={{ height: 10 }} />
-
+                <Gap height={10} />
                 <ScanKupon />
-                <View style={{ height: 15 }} />
-
+                <Gap height={15} />
                 {/* MAIN MENU */}
                 <ScrollView
                     showsHorizontalScrollIndicator={false}
@@ -31,38 +30,56 @@ const Home = () => {
                     <MainMenu title="Tiket Kereta Api" />
                     <MainMenu title="Semua Promo" />
                     <MainMenu title="Kesehatan" />
-                    <View style={{ width: 15 }} />
+                    <Gap width={15} />
                 </ScrollView>
-                <View style={{ height: 15 }} />
-
+                <Gap height={15} />
                 <KhususPenggunaBaru />
-                <View style={{ height: 15 }} />
-
+                <Gap height={15} />
                 <KejarDiskon />
-                <View style={{ height: 15 }} />
-
+                <Gap height={15} />
                 {/* TERLARIS UNTUKMU */}
                 <TextHeader title="Terlaris Untukmu" title2="Lihat Semua" />
                 <ScrollView
                     showsHorizontalScrollIndicator={false}
                     style={styles.scrollMenu}
                     horizontal>
-                    <Card1 image={ILTas} title="Tas Eiger for your Adventure" coret="Rp.500.000" cost="Rp.459.000"/>
-                    <Card1 image={ILHP} title="Samsung A50S" coret="Rp.4.500.000" cost="Rp.4380.000"/>
-                    <Card1 image={ILSepeda} title="Sepeda Lipat Poligon" coret="Rp.9.800.000" cost="Rp.9.590.000"/>
-                    <Card1 image={ILTas} title="Tas Eiger for your Adventure" coret="Rp.500.000" cost="Rp.459.000"/>
-                    <Card1 image={ILHP} title="Samsung A50S" coret="Rp.4.500.000" cost="Rp.4380.000"/>
+                    <Card1 image={ILTas} title="Tas Eiger for your Adventure" coret="Rp.500.000" cost="Rp.459.000" />
+                    <Card1 image={ILHP} title="Samsung A50S" coret="Rp.4.500.000" cost="Rp.4380.000" />
+                    <Card1 image={ILSepeda} title="Sepeda Lipat Poligon" coret="Rp.9.800.000" cost="Rp.9.590.000" />
+                    <Card1 image={ILTas} title="Tas Eiger for your Adventure" coret="Rp.500.000" cost="Rp.459.000" />
+                    <Card1 image={ILHP} title="Samsung A50S" coret="Rp.4.500.000" cost="Rp.4380.000" />
                     <Card1 />
-                    <View style={{ width: 20 }} />
+                    <Gap width={25} />
                 </ScrollView>
+                <Gap height={15} />
+                {/* Pilihan button */}
+                <ScrollView
+                    showsHorizontalScrollIndicator={false}
+                    style={styles.scrollMenu}
+                    horizontal>
+                    <ButtonColor bckg="purple" title="For You" />
+                    <ButtonColor bckg="salmon" title="Special Discount" />
+                    <ButtonColor bckg="violet" title="Aktivitasmu" />
+                    <ButtonColor bckg="chocolate" title="Buku Cerita Anak" />
+                    <ButtonColor bckg="orange" title="Sepeda Gunung" />
+                    <Gap width={25} />
+                </ScrollView>
+                <Gap height={15} />
+
+                {/* PRODUCT */}
+                <View style={styles.product}>
+                    <Card2 />
+                    <Card2 />
+                    <Card2 />
+                    <Card2 />
+                    <Card2 />
+                    <Card2 />
+                    <Card2 />
+                </View>
 
 
-                <View style={{ height: 100 }} />
-
-
+                <Gap height={10} />
             </ScrollView>
-
-
         </View>
     )
 }
@@ -78,5 +95,11 @@ const styles = StyleSheet.create({
     },
     scrollMenu: {
         paddingHorizontal: 14
+    },
+    product: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        paddingHorizontal: 14,
+        justifyContent:'space-between'
     }
 })

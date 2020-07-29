@@ -7,5 +7,9 @@ export const colors = {
     gray:'gray',
     gray1: '#474747',
     border: '#d2d2d2',
-    bckgMenu: '#e6f2ff'
+    bckgMenu: '#e6f2ff',
+    violet:'violet',
+    purple:'purple',
+    orange:'orange',
+    salmon:'salmon'
 }
