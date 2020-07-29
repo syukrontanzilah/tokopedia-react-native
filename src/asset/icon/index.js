@@ -43,10 +43,17 @@ import IconStarHalf from './star-half-filled.svg';
 import IconStarEmpty from './star-empty.svg';
 import IconVoice from './voice.svg'
 
-import IconBackTo from './left-arrow-3.svg'
+import IconBackTo from './left-arrow-3.svg';
+import IconLike from './like.svg';
+import IconComment from './comment.svg';
+import IconShare from './share.svg';
+import IconSelengkapnya from './selengkapnya.svg';
+import IconPlus from './plus.svg'
 
 
-export { IconCar, IconCoffee, IconGame, IconHoby, IconFlower, 
+export { 
+    IconLike, IconComment, IconShare, IconSelengkapnya, IconPlus,
+    IconCar, IconCoffee, IconGame, IconHoby, IconFlower, 
     IconMatahari, IconWanita, IconBug, IconShirt, 
     IconHome,
     IconHomeActive,

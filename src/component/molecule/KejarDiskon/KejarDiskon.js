@@ -70,14 +70,9 @@ const KejarDiskon = () => {
                         <IconNext />
                         <Text style={styles.lihat}>Lihat Produk Lainnya</Text>
                     </TouchableOpacity>
-
                     <View style={{ width: 135 }} />
-
                 </ScrollView>
             </ImageBackground>
-
-
-
         </View>
     )
 }
