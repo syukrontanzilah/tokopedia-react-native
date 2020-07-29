@@ -1,22 +1,22 @@
 import React from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { IconMap, IconStarEmpty, IconStarFull, IconStarHalf, ILBebasOngkir, ILHP } from '../../../asset'
+import { IconMap, IconStarEmpty, IconStarFull, IconStarHalf, ILBebasOngkir } from '../../../asset'
 import { colors } from '../../../utils/colors'
 
-const Card2 = () => {
+const Card2 = ({title, price, city, photo}) => {
     return (
         <TouchableOpacity style={styles.container}>
             <View style={styles.wrapImage}>
-                <Image source={ILHP} style={styles.image} />
+                <Image source={photo} style={styles.image} />
             </View>
 
             <View style={styles.wrapText}>
-                <Text style={styles.productName}>Nokia terbaru dengan spec yang lebih memikat hati dan sanubari cocok kamu yang sering dilanda kegalauan</Text>
-                <Text style={styles.cost}>Rp.789.000</Text>
+                <Text style={styles.productName}>{title}</Text>
+                <Text style={styles.cost}>{price}</Text>
 
                 <View style={styles.wrapLokasi}>
                     <IconMap />
-                    <Text style={styles.city}>Tangerang Selatan</Text>
+                    <Text style={styles.city}>{city}</Text>
                 </View>
                 <View style={styles.wrapLokasi}>
                     <IconStarFull />

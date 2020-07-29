@@ -13,7 +13,10 @@ import Electronic from './OfficeStore/Electronic';
 import Fashion from './OfficeStore/Fashion';
 import Groceries from './OfficeStore/Groceries';
 import HomeOffice from './OfficeStore/HomeOffice';
-import SearchPage from './SearchPage/SearchPage'
+import SearchPage from './SearchPage/SearchPage';
+import Notifikasi from './Notifikasi/Notifikasi';
+import Update from './Feed/Update';
+import Explore from './Feed/Explore'
 
 
 export {
@@ -28,5 +31,7 @@ export {
     TabItem,
     RouteOfficeStore,
     AutoHobbies, Electronic, Fashion, Groceries, HomeOffice,
-    SearchPage
+    SearchPage,
+    Notifikasi,
+    Update, Explore
 }

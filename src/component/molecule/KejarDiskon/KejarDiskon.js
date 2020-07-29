@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView, ImageBackground } from 'react-native'
 import { colors } from '../../../utils/colors'
 import { ILBanner, ILHP, ILBebasOngkir, ILTas, ILSepeda, ILLaptop } from '../../../asset/ilustration'
 import { IconNext } from '../../../asset/icon'
+import Fire from '../../../config/Fire'
 
 const KejarDiskon = () => {
+    const [product, setProduct] = useState([]);
+    useEffect(() => {
+        Fire.database()
+            .ref('product')
+            .once('value')
+            .then(res => {
+                if (res.val()) {
+                    setProduct(res.val())
+                }
+            }).catch(err => { })
+    }, [])
     return (
         <View style={styles.container}>
             <View style={styles.judul}>
@@ -25,8 +37,6 @@ const KejarDiskon = () => {
                         </View>
                     </View>
                 </View>
-
-
                 <TouchableOpacity>
                     <Text style={styles.lihat}>Lihat Semua</Text>
                 </TouchableOpacity>
@@ -39,55 +49,25 @@ const KejarDiskon = () => {
                     showsHorizontalScrollIndicator={false}
                     horizontal
                     style={styles.scroll}>
+                    {
+                        product.map(item => {
+                            return (
+                                <TouchableOpacity style={styles.card}>
+                                    <View style={styles.imageWrap}>
+                                        <Image source={{ uri: item.photo }} style={styles.image} />
+                                    </View>
+                                    <View style={styles.wrapHarga}>
+                                        <Text style={styles.angkaCoret}>{item.coret}</Text>
+                                        <Text style={styles.harga}>{item.price}</Text>
+                                        <Image source={ILBebasOngkir} style={styles.logo} />
+                                    </View>
+                                </TouchableOpacity>
+                            )
+                        })
+                    }
 
-
-                    <TouchableOpacity style={styles.card}>
-                        <View style={styles.imageWrap}>
-                            <Image source={ILHP} style={styles.image} />
-                        </View>
-                        <View style={styles.wrapHarga}>
-                            <Text style={styles.angkaCoret}>Rp. 8.500.000</Text>
-                            <Text style={styles.harga}>Rp. 7.999.900</Text>
-                            <Image source={ILBebasOngkir} style={styles.logo} />
-                        </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity style={styles.card}>
-                        <View style={styles.imageWrap}>
-                            <Image source={ILTas} style={styles.image} />
-                        </View>
-                        <View style={styles.wrapHarga}>
-                            <Text style={styles.angkaCoret}>Rp. 429.000</Text>
-                            <Text style={styles.harga}>Rp. 350.900</Text>
-                            <Image source={ILBebasOngkir} style={styles.logo} />
-                        </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity style={styles.card}>
-                        <View style={styles.imageWrap}>
-                            <Image source={ILSepeda} style={styles.image} />
-                        </View>
-                        <View style={styles.wrapHarga}>
-                            <Text style={styles.angkaCoret}>Rp. 9.829.000</Text>
-                            <Text style={styles.harga}>Rp. 9.350.900</Text>
-                            <Image source={ILBebasOngkir} style={styles.logo} />
-                        </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity style={styles.card}>
-                        <View style={styles.imageWrap}>
-                            <Image source={ILLaptop} style={styles.image} />
-                        </View>
-                        <View style={styles.wrapHarga}>
-                            <Text style={styles.angkaCoret}>Rp. 5.429.000</Text>
-                            <Text style={styles.harga}>Rp. 4.899.900</Text>
-                            <Image source={ILBebasOngkir} style={styles.logo} />
-                        </View>
-                    </TouchableOpacity>
-
-                  
                     <TouchableOpacity style={styles.cardLast}>
-                        <IconNext/>
+                        <IconNext />
                         <Text style={styles.lihat}>Lihat Produk Lainnya</Text>
                     </TouchableOpacity>
 
@@ -188,7 +168,7 @@ const styles = StyleSheet.create({
     angkaCoret: {
         textDecorationLine: 'line-through',
         color: colors.gray,
-        marginTop:5
+        marginTop: 5
     },
     harga: {
         fontSize: 16,
@@ -197,13 +177,13 @@ const styles = StyleSheet.create({
     logo: {
         height: 18, width: 65
     },
-    cardLast:{
+    cardLast: {
         height: 210,
         width: 130,
         backgroundColor: colors.white,
         borderRadius: 10,
         marginRight: 10,
-        justifyContent:'center',
-        alignItems:'center'
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 })

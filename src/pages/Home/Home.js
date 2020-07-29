@@ -1,14 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import { CarouselHome, SearchAndIcon, ScanKupon, MainMenu, KhususPenggunaBaru, KejarDiskon, TextHeader, Card1, Gap, ButtonColor, Card2 } from '../../component'
 import { ILTas, ILHP, ILSepeda } from '../../asset/ilustration'
 import { colors } from '../../utils/colors'
+import Fire from '../../config/Fire'
 
-const Home = ({navigation}) => {
+const Home = ({ navigation }) => {
+    const [product, setProduct] = useState([])
+    useEffect(() => {
+        Fire.database()
+            .ref('product')
+            .once('value')
+            .then(res => {
+                if (res.val()) {
+                    setProduct(res.val())
+                }
+            }).catch(err => { })
+    }, [])
     return (
         <View style={styles.page}>
             <SearchAndIcon
-            onPressSearch={()=> navigation.navigate('SearchPage')} />
+                onPressSearch={() => navigation.navigate('SearchPage')}
+                onPressNotifikasi={() => navigation.navigate('Notifikasi')} />
             <ScrollView
                 showsVerticalScrollIndicator={false}
                 style={styles.content}>
@@ -44,12 +57,17 @@ const Home = ({navigation}) => {
                     showsHorizontalScrollIndicator={false}
                     style={styles.scrollMenu}
                     horizontal>
-                    <Card1 image={ILTas} title="Tas Eiger for your Adventure" coret="Rp.500.000" cost="Rp.459.000" />
-                    <Card1 image={ILHP} title="Samsung A50S" coret="Rp.4.500.000" cost="Rp.4380.000" />
-                    <Card1 image={ILSepeda} title="Sepeda Lipat Poligon" coret="Rp.9.800.000" cost="Rp.9.590.000" />
-                    <Card1 image={ILTas} title="Tas Eiger for your Adventure" coret="Rp.500.000" cost="Rp.459.000" />
-                    <Card1 image={ILHP} title="Samsung A50S" coret="Rp.4.500.000" cost="Rp.4380.000" />
-                    <Card1 />
+                    {
+                        product.map(terlaris => {
+                            return <Card1 
+                            key={terlaris.id}
+                            title={terlaris.title}
+                            cost={terlaris.price}
+                            image={{uri: terlaris.photo}}
+                            coret={terlaris.coret}
+                            />
+                        })
+                    }
                     <Gap width={25} />
                 </ScrollView>
                 <Gap height={15} />
@@ -69,13 +87,17 @@ const Home = ({navigation}) => {
 
                 {/* PRODUCT */}
                 <View style={styles.product}>
-                    <Card2 />
-                    <Card2 />
-                    <Card2 />
-                    <Card2 />
-                    <Card2 />
-                    <Card2 />
-                    <Card2 />
+                    {
+                        product.map(item => {
+                            return <Card2
+                                key={item.id}
+                                title={item.title}
+                                city={item.city}
+                                photo={{ uri: item.photo }}
+                                price={item.price}
+                            />
+                        })
+                    }
                 </View>
 
 
@@ -101,6 +123,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
         paddingHorizontal: 14,
-        justifyContent:'space-between'
+        justifyContent: 'space-between'
     }
 })

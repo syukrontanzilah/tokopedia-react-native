@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { IconBell, IconLove, IconPesan, IconSearch } from '../../../asset/icon'
 import { colors } from '../../../utils/colors'
 
-const SearchAndIcon = ({onPressSearch}) => {
+const SearchAndIcon = ({onPressSearch, onPressNotifikasi}) => {
     return (
         <View style={styles.container}>
             <TouchableOpacity 
@@ -19,7 +19,9 @@ const SearchAndIcon = ({onPressSearch}) => {
                 <TouchableOpacity style={styles.icon}>
                     <IconPesan />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.icon}>
+                <TouchableOpacity 
+                onPress = {onPressNotifikasi}
+                style={styles.icon}>
                     <IconBell />
                 </TouchableOpacity>
             </View>
