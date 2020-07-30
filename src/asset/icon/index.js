@@ -48,10 +48,16 @@ import IconLike from './like.svg';
 import IconComment from './comment.svg';
 import IconShare from './share.svg';
 import IconSelengkapnya from './selengkapnya.svg';
-import IconPlus from './plus.svg'
+import IconPlus from './plus.svg';
+
+import IconHomeWhite from './home.svg';
+import IconAutomotif from './gear.svg';
+import IconGift from './gift.svg';
+import IconBox from './safebox.svg'
 
 
 export { 
+    IconHomeWhite, IconAutomotif, IconGift, IconBox,
     IconLike, IconComment, IconShare, IconSelengkapnya, IconPlus,
     IconCar, IconCoffee, IconGame, IconHoby, IconFlower, 
     IconMatahari, IconWanita, IconBug, IconShirt, 

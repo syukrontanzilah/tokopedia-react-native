@@ -24,7 +24,6 @@ const Feed = () => {
         renderScene={renderScene}
         onIndexChange={setIndex}
         initialLayout={initialLayout}
-        
       />
     </View>
   )

@@ -9,15 +9,9 @@ const Tab = createMaterialTopTabNavigator();
 
 const RouteOfficeStore = () => {
     return (
-        <NavigationContainer>
-            <Tab.Navigator>
-                <Tab.Screen name="Home" component={OfficeStore} />
-                <Tab.Screen name="Auto Hobbies" component={AutoHobbies} />
-                <Tab.Screen name="Electronics" component={Electronic} />
-                <Tab.Screen name="Groceries" component={Groceries} />
-                <Tab.Screen name="Fashion" from component={Fashion} />
-            </Tab.Navigator>
-        </NavigationContainer>
+     <View>
+         
+     </View>
 
     )
 }

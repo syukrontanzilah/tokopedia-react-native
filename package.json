@@ -27,7 +27,9 @@
     "react-native-screens": "^2.9.0",
     "react-native-svg": "^12.1.0",
     "react-native-tab-view": "^2.15.0",
-    "react-navigation-side-tabs": "0.0.7"
+    "react-native-vector-icons": "^7.0.0",
+    "react-navigation-side-tabs": "0.0.7",
+    "react-number-format": "^4.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",

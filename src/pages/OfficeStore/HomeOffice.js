@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 
 const HomeOffice = () => {
     return (
-        <View>
+        <View style={styles.page}>
             <Text>Home office store</Text>
         </View>
     )
@@ -11,4 +11,9 @@ const HomeOffice = () => {
 
 export default HomeOffice
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    page:{
+        flex:1,
+        backgroundColor:'white'
+    }
+})

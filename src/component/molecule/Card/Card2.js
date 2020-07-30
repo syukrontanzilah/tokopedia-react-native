@@ -40,11 +40,11 @@ export default Card2
 const styles = StyleSheet.create({
     container: {
         // height: 300,
-        width: '48%',
+        width: '49%',
         backgroundColor: colors.white,
         // marginHorizontal:10,
         borderRadius: 10,
-        marginVertical: 10,
+        marginVertical: 5,
         borderWidth: 0.8,
         borderColor: colors.border
     },

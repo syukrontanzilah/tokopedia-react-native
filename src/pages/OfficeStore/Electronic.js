@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 
 const Electronic = () => {
     return (
-        <View>
+        <View style={styles.page}>
             <Text>electronic</Text>
         </View>
     )
@@ -11,4 +11,9 @@ const Electronic = () => {
 
 export default Electronic
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    page:{
+        flex:1,
+        backgroundColor:'white'
+    }
+})

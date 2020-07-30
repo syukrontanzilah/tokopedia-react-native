@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 
 const Fashion = () => {
     return (
-        <View>
+        <View style={styles.page}>
             <Text></Text>
         </View>
     )
@@ -11,4 +11,9 @@ const Fashion = () => {
 
 export default Fashion
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    page:{
+        flex:1,
+        backgroundColor:'white'
+    }
+})

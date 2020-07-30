@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native'
+import { Image, ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { Gap } from '../../component'
-import { ILHP } from '../../asset'
 
 
 const Explore = ({ navigation, }) => {
@@ -100,7 +99,6 @@ const styles = StyleSheet.create({
         height: 130,
         backgroundColor: 'wheat',
         width: '33.33%',
-
     },
     image: {
         height: undefined,
