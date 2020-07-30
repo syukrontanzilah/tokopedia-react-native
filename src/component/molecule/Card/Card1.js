@@ -3,9 +3,11 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import { colors } from '../../../utils/colors'
 import { ILHP, ILTas, ILBebasOngkir } from '../../../asset/ilustration'
 
-const Card1 = ({title, coret, cost, image}) => {
+const Card1 = ({title, coret, cost, image, onPress}) => {
     return (
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity
+        onPress={onPress}
+        style={styles.container}>
             <View style={styles.wrapImage}>
                 <Image source={image} style={styles.image} />
             </View>

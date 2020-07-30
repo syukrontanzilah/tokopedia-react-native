@@ -6,7 +6,7 @@ const Splash = ({ navigation }) => {
     useEffect(() => {
         setTimeout(() => {
             navigation.replace('MainApp')
-        }, 3000)
+        }, 1000)
     }, [])
     return (
         <ImageBackground

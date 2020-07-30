@@ -16,7 +16,19 @@ import HomeOffice from './OfficeStore/HomeOffice';
 import SearchPage from './SearchPage/SearchPage';
 import Notifikasi from './Notifikasi/Notifikasi';
 import Update from './Feed/Update';
-import Explore from './Feed/Explore'
+import Explore from './Feed/Explore';
+import DetailProduct from './Product/DetaiProduct';
+
+import MenuAngsuran from './MainMenu/Angsuran';
+import MenuKategori from './MainMenu/Kategori';
+import MenuKesehatan from './MainMenu/Kesehatan';
+import MenuKeuangan from './MainMenu/Keuangan';
+import MenuLihatSemua from './MainMenu/LihatSemua';
+import MenuPulsa from './MainMenu/Pulsa';
+import MenuSemuaPromo from './MainMenu/SemuaPromo';
+import MenuTiket from './MainMenu/Tiket';
+import MenuTopup from './MainMenu/Topup';
+import MenuTravel from './MainMenu/Travel'
 
 
 export {
@@ -33,5 +45,7 @@ export {
     AutoHobbies, Electronic, Fashion, Groceries, HomeOffice,
     SearchPage,
     Notifikasi,
-    Update, Explore
+    Update, Explore, DetailProduct,
+    MenuAngsuran, MenuKategori, MenuKesehatan, MenuKeuangan, MenuLihatSemua, MenuPulsa, MenuSemuaPromo,
+    MenuTiket, MenuTopup, MenuTravel
 }

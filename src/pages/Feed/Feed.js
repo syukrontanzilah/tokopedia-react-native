@@ -20,7 +20,6 @@ const Feed = () => {
   return (
     <View style={{ flex: 1 }}>
       <TabView
-      
         navigationState={{ index, routes }}
         renderScene={renderScene}
         onIndexChange={setIndex}

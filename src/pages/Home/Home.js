@@ -5,7 +5,7 @@ import { ILTas, ILHP, ILSepeda } from '../../asset/ilustration'
 import { colors } from '../../utils/colors'
 import Fire from '../../config/Fire'
 
-const Home = ({ navigation }) => {
+const Home = ({ navigation, }) => {
     const [product, setProduct] = useState([])
     useEffect(() => {
         Fire.database()
@@ -34,22 +34,24 @@ const Home = ({ navigation }) => {
                     showsHorizontalScrollIndicator={false}
                     style={styles.scrollMenu}
                     horizontal>
-                    <MainMenu title="Lihat Semua" />
-                    <MainMenu title="Kategori" />
-                    <MainMenu title="Top Up & Tagihan" />
-                    <MainMenu title="Keuangan" />
-                    <MainMenu title="Travel & Entertainment" />
-                    <MainMenu title="Pulsa" />
-                    <MainMenu title="Angsuran Kredit" />
-                    <MainMenu title="Tiket Kereta Api" />
-                    <MainMenu title="Semua Promo" />
-                    <MainMenu title="Kesehatan" />
+                    <MainMenu title="Lihat Semua" onPress={()=> navigation.navigate('MenuLihatSemua')} />
+                    <MainMenu title="Kategori" onPress={()=> navigation.navigate('MenuKategori')} />
+                    <MainMenu title="Top Up & Tagihan" onPress={()=> navigation.navigate('MenuTopup')} />
+                    <MainMenu title="Keuangan" onPress={()=> navigation.navigate('MenuKeuangan')} />
+                    <MainMenu title="Travel & Entertainment" onPress={()=> navigation.navigate('MenuTravel')} />
+                    <MainMenu title="Pulsa" onPress={()=> navigation.navigate('MenuPulsa')} />
+                    <MainMenu title="Angsuran Kredit" onPress={()=> navigation.navigate('MenuAngsuran')} />
+                    <MainMenu title="Tiket Kereta Api" onPress={()=> navigation.navigate('MenuTiket')} />
+                    <MainMenu title="Semua Promo" onPress={()=> navigation.navigate('MenuSemuaPromo')} />
+                    <MainMenu title="Kesehatan" onPress={()=> navigation.navigate('MenuKesehatan')} />
                     <Gap width={15} />
                 </ScrollView>
                 <Gap height={15} />
                 <KhususPenggunaBaru />
                 <Gap height={15} />
-                <KejarDiskon />
+                <KejarDiskon
+                // onPress={()=>navigation.navigate('DetailProduct')}
+                />
                 <Gap height={15} />
                 {/* TERLARIS UNTUKMU */}
                 <TextHeader title="Terlaris Untukmu" title2="Lihat Semua" />
@@ -65,6 +67,7 @@ const Home = ({ navigation }) => {
                             cost={terlaris.price}
                             image={{uri: terlaris.photo}}
                             coret={terlaris.coret}
+                            onPress={()=> navigation.navigate('DetailProduct', terlaris)}
                             />
                         })
                     }
@@ -95,6 +98,7 @@ const Home = ({ navigation }) => {
                                 city={item.city}
                                 photo={{ uri: item.photo }}
                                 price={item.price}
+                                onPress={()=> navigation.navigate('DetailProduct', item)}
                             />
                         })
                     }

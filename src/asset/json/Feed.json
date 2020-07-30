@@ -1,0 +1,33 @@
+{
+    "data" : [
+        {
+            "id" : 1,
+            "title" : "Apple MacBook Pro 13-inch (2020)",
+            "image" : "https://cdn.pocket-lint.com/r/s/1200x/assets/images/152137-laptops-review-apple-macbook-pro-2020-review-image1-pbzm4ejvvs.jpg",
+            "seller" : "Q-IT Teknik",
+            "price" : "18000000",
+            "status": "The 13-inch MacBook Pro makes it 2020 return, complete with Touch Bar. But there's no larger screen option for this generation, so is it worth buying?",
+            "imagelogo" : "https://seeklogo.com/images/I/it-logo-76626EF287-seeklogo.com.png"
+            
+        },
+        {
+            "id" : 2,
+            "title" : "Fatimah Dresse Muslimah Syar'i",
+            "image" : "https://cf.shopee.co.id/file/4f00d97742d7d9988b903ee3b4640b90",
+            "seller" : "Kanza Store",
+            "price" : "180000",
+            "status": "Terima kasih yang sudah mengorder kepada kami, kami akan berusaha yang terbaik utk kustomer kami :)",
+            "imagelogo" : "https://image.shutterstock.com/image-vector/muslimah-hijab-logo-template-vector-260nw-1286984506.jpg"
+            
+        },
+        {
+            "id":3,
+            "title": "Alisan Hitam Polos Lengan Panjang ",
+            "image" : "https://cf.shopee.co.id/file/9c5ad168e276e760d4d53d40fc525a88",
+            "price": "140000",
+            "seller": "Alisan-Storee",
+            "status": "Thank for your order dear my customers",
+            "imagelogo": "https://luxuriouscraving.com/wp-content/uploads/2019/02/242-a.jpg"
+        }
+    ]
+}

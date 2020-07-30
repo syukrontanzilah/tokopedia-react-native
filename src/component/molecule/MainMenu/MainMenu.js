@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { IconBug, IconMatahari, IconLight, IconKategori, IconTravel, IconPulsa, IconKeuangan, IconLihatSemua, IconRecycle, IconSemuaPromo, IconMobil, IconKesehatan } from '../../../asset/icon'
 import { colors } from '../../../utils/colors'
 
-const MainMenu = ({ title }) => {
+const MainMenu = ({ title, onPress }) => {
     const Icon = () => {
         if (title === "Kategori") {
             return <IconKategori style={styles.iconSpec} />
@@ -39,7 +39,9 @@ const MainMenu = ({ title }) => {
         return <IconMatahari style={styles.iconSpec} />
     }
     return (
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity
+        onPress={onPress}
+        style={styles.container}>
             <View style={styles.content}>
                 <View style={styles.icon}>
                     <Icon />

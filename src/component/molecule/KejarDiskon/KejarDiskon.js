@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView, ImageBackground } from 'react-native'
-import { colors } from '../../../utils/colors'
-import { ILBanner, ILHP, ILBebasOngkir, ILTas, ILSepeda, ILLaptop } from '../../../asset/ilustration'
+import { Image, ImageBackground, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { IconNext } from '../../../asset/icon'
+import { ILBanner, ILBebasOngkir } from '../../../asset/ilustration'
 import Fire from '../../../config/Fire'
+import { colors } from '../../../utils/colors'
 
-const KejarDiskon = () => {
+const KejarDiskon = ({onPress, item, navigation}) => {
     const [product, setProduct] = useState([]);
     useEffect(() => {
         Fire.database()
@@ -52,7 +52,9 @@ const KejarDiskon = () => {
                     {
                         product.map(item => {
                             return (
-                                <TouchableOpacity style={styles.card}>
+                                <TouchableOpacity
+                                onPress={onPress}
+                                style={styles.card}>
                                     <View style={styles.imageWrap}>
                                         <Image source={{ uri: item.photo }} style={styles.image} />
                                     </View>
