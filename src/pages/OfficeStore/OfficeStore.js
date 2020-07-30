@@ -2,21 +2,9 @@ import React from 'react';
 import { Dimensions, StyleSheet, View } from 'react-native';
 import { SceneMap, TabBar, TabView } from 'react-native-tab-view';
 import { AutoHobbies, Electronic, Fashion, Groceries, HomeOffice } from '..';
-import { IconAkunActive, IconHoby, IconHomeWhite, IconAutomotif, IconGift, IconBox, IconGame } from '../../asset';
+import { IconAkunActive, IconAutomotif, IconBox, IconGame, IconGift, IconHomeWhite } from '../../asset';
 import { Gap, SearchAndIcon } from '../../component';
 import { colors } from '../../utils/colors';
-
-
-// const OfficeStore = () => {
-//   return (
-//     <View style={styles.page}>
-//       <SearchAndIcon />
-//       <View style={{height:50}}></View>
-//     <Icon name="person" size={30}/>
-//     <Text>hallo</Text>
-//     </View>
-//   )
-// }
 
 const getTabBarIcon = (props) => {
   const { route } = props
@@ -38,7 +26,6 @@ const getTabBarIcon = (props) => {
   return <IconAkunActive />
 }
 
-
 class OfficeStore extends React.Component {
   state = {
     index: 0,
@@ -53,7 +40,7 @@ class OfficeStore extends React.Component {
   render() {
     return (
       <View style={styles.page}>
-        <SearchAndIcon />
+        <SearchAndIcon onPressSearch={()=>this.props.navigation.navigate('SearchPage')}/>
         <Gap height={55} />
         <TabView
           navigationState={this.state}
@@ -74,7 +61,7 @@ class OfficeStore extends React.Component {
                 props => getTabBarIcon(props)
               }
               tabStyle={styles.bubble}
-              labelStyle={styles.noLabel}
+              labelStyle={styles.Label}
             />
           }
           tabBarPosition={'top'}
@@ -93,7 +80,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.border
   },
-  noLabel: {
+  Label: {
     textTransform: 'capitalize',
     fontSize: 12,
     color: colors.white

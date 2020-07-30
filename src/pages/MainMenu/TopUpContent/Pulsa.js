@@ -1,14 +1,14 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const Topup = () => {
+const Pulsa = () => {
     return (
         <View>
-            <Text>topup</Text>
+            <Text>Pulsa</Text>
         </View>
     )
 }
 
-export default Topup
+export default Pulsa
 
 const styles = StyleSheet.create({})

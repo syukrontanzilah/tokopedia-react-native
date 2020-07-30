@@ -1,14 +1,14 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const Topup = () => {
+const Roaming = () => {
     return (
         <View>
-            <Text>topup</Text>
+            <Text>roaming</Text>
         </View>
     )
 }
 
-export default Topup
+export default Roaming
 
 const styles = StyleSheet.create({})

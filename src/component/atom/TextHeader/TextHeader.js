@@ -11,7 +11,6 @@ const TextHeader = ({title, title2 }) => {
                 <Text style={styles.lihat}>{title2}</Text>
             </TouchableOpacity>
         </View>
-
     )
 }
 

@@ -5,10 +5,12 @@ import MainMenu from './MainMenu/MainMenu';
 import KhususPenggunaBaru from './KhususPenggunaBaru/KhususPenggunaBaru';
 import KejarDiskon from './KejarDiskon/KejarDiskon'
 import Card1 from './Card/Card1';
-import Card2 from './Card/Card2'
+import Card2 from './Card/Card2';
+import CarouselOfficeStore from './Carousel/CarouselOfficeStore'
 
 export{
     CarouselHome,
+    CarouselOfficeStore,
     SearchAndIcon,
     ScanKupon,
     MainMenu,

@@ -1,11 +1,12 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
+import { CarouselOfficeStore } from '../../component'
 
 const Electronic = () => {
     return (
-        <View style={styles.page}>
-            <Text>electronic</Text>
-        </View>
+        <ScrollView style={styles.page}>
+            <CarouselOfficeStore/>
+        </ScrollView>
     )
 }
 

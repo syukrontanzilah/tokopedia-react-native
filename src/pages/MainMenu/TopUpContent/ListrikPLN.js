@@ -1,14 +1,14 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const Topup = () => {
+const ListrikPLN = () => {
     return (
         <View>
-            <Text>topup</Text>
+            <Text>listrik pln</Text>
         </View>
     )
 }
 
-export default Topup
+export default ListrikPLN
 
 const styles = StyleSheet.create({})

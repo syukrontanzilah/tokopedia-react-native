@@ -1,14 +1,14 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const Topup = () => {
+const PaketData = () => {
     return (
         <View>
-            <Text>topup</Text>
+            <Text>paket data</Text>
         </View>
     )
 }
 
-export default Topup
+export default PaketData
 
 const styles = StyleSheet.create({})

@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, StyleSheet, Dimensions, Text } from 'react-native';
-import { TabView, SceneMap } from 'react-native-tab-view';
+import { TabView, SceneMap,TabBar } from 'react-native-tab-view';
 import { Explore, Update } from '..';
 
 const initialLayout = { width: Dimensions.get('window').width };

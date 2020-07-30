@@ -1,14 +1,14 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const Topup = () => {
+const AngsuranKredit = () => {
     return (
         <View>
-            <Text>topup</Text>
+            <Text>angsuran kredit</Text>
         </View>
     )
 }
 
-export default Topup
+export default AngsuranKredit
 
 const styles = StyleSheet.create({})
